@@ -467,6 +467,35 @@ SEL其实是对方法的一种包装，将方法包装成一个SEL类型的数�
 
 ***********************************************
 ScollView内容
+1.将需要展示的内容添加到UIScrollView中,在view下增加ScrollView,ScrollView下增加imageview
+2.设置UIScrollView的contentSize属性，告诉UIScrollView所有内容的尺寸，也就是告诉它滚动的范围（能滚多远，滚到哪里是尽头）
+self.scrollView.contentSize = CGSizeMake(500,480);
+
+获取图片尺寸：self.minionView.frame.size;
+self.minionView.image.size;
+
+@property(nonatomic) CGPoint contentOffset; 
+这个属性用来表示UIScrollView滚动的位置
+
+@property(nonatomic) CGSize contentSize; 
+这个属性用来表示UIScrollView内容的尺寸，滚动范围（能滚多远）
+
+@property(nonatomic) UIEdgeInsets contentInset; 
+这个属性能够在UIScrollView的4周增加额外的滚动区域
+
+移动效果动画实现
+ [UIView animateWithDuration:1.0 animations:^{
+	self.scrollView.contentOffset = CGPointMake(100,0);
+]}
+动画方法2
+[self.scrollView setContentOffset:offset animated:YES];
+
+缩放大小需要设定max min
+
+
+
+
+
 
 
 ***********************************************
