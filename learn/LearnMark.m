@@ -492,6 +492,9 @@ self.minionView.image.size;
 
 缩放大小需要设定max min
 
+图片轮播器 时间间隔设定
+[NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(nextImage) userInfo:nil repeats:YES];
+
 
 
 
