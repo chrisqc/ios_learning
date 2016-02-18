@@ -496,8 +496,9 @@ self.minionView.image.size;
 [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(nextImage) userInfo:nil repeats:YES];
 
 
-
-
+//给cell内部子控件设定数据
+UIImageView *iconView = (UIimageView *)[cell viewWithTag:10]
+ 
 
 
 
